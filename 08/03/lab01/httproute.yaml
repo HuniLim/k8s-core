@@ -5,8 +5,9 @@ metadata:
   namespace: lab01
 spec:
   parentRefs:
-  - name: gw
+  - name: app
   rules:
+  
   - matches:
     - path:
         type: PathPrefix
@@ -14,6 +15,7 @@ spec:
     backendRefs:
     - name: app-a
       port: 80
+
   - matches:
     - path:
         type: PathPrefix
